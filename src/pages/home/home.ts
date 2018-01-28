@@ -36,7 +36,7 @@ export class HomePage {
     //this.navCtrl.push('CategoriasPage'); //Empilha a página e habilita o botão voltar.
     console.log(this.creds);
     this.auth.authenticate(this.creds).subscribe(response => {
-      console.log(response.headers.get('Authorization'));
+      this.auth.successFullLogin(response.headers.get('Authorization'));
       this.navCtrl.setRoot('CategoriasPage'); //Utiliza a pagina como principal, mostra o botão menu.
     },
       error => { });
