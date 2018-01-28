@@ -8,11 +8,11 @@
     
     <ion-item>
       <ion-label floating>Email</ion-label>
-      <ion-input type="email"></ion-input>
+      <ion-input [(ngModel)]="creds.email" type="email" name="email"></ion-input>
     </ion-item>
     <ion-item>
       <ion-label floating >Senha</ion-label>
-      <ion-input type="password"></ion-input>
+      <ion-input [(ngModel)]="creds.senha" type="password" name="senha"></ion-input>
     </ion-item>
 
     <button ion-button block (click)="login()">ENTRAR</button>
