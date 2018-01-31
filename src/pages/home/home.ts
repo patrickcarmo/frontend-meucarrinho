@@ -32,6 +32,15 @@ export class HomePage {
     this.menu.swipeEnable(true); //Habilita o menu lateral quand for sair da página.
   }
 
+  ionViewDidEnter(){
+    console.log(this.creds);
+    this.auth.refreshToken().subscribe(response => {
+      this.auth.successFullLogin(response.headers.get('Authorization'));
+      this.navCtrl.setRoot('CategoriasPage'); //Utiliza a pagina como principal, mostra o botão menu.
+    },
+      error => { });
+  }
+
   login() {
     //this.navCtrl.push('CategoriasPage'); //Empilha a página e habilita o botão voltar.
     console.log(this.creds);
