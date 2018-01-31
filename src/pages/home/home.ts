@@ -49,7 +49,10 @@ export class HomePage {
       this.navCtrl.setRoot('CategoriasPage'); //Utiliza a pagina como principal, mostra o botão menu.
     },
       error => { });
-    
+  }
+
+  signup() {
+    this.navCtrl.push('SignupPage');
   }
 
 }
