@@ -4,7 +4,7 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import { ProdutoDTO } from './../../models/produto.dto';
 import { ProdutoService } from './../../services/domain/produto.service';
 import { API_CONFIG } from '../../config/api.config';
-
+import { ProdutoDetailPage } from './../produto-detail/produto-detail';
 @IonicPage()
 @Component({
   selector: 'page-produtos',
@@ -41,6 +41,10 @@ export class ProdutosPage {
         error => {}
         );
     }
+  }
+
+  showDetail() {
+    this.navCtrl.push('ProdutoDetailPage');
   }
 
 }
