@@ -1,3 +1,4 @@
+import { OrderConfirmationPage } from './../order-confirmation/order-confirmation';
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 
@@ -32,6 +33,7 @@ export class PaymentPage {
 
   nextPage() {
     this.pedido.pagamento = this.formGroup.value;
+    this.navCtrl.setRoot('OrderConfirmationPage', { pedido: this.pedido });
   }
 
 }
