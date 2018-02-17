@@ -3,7 +3,6 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 
 import { CategoriaDTO } from '../../models/categoria.dto';
 import { API_CONFIG } from '../../config/api.config';
-import { ProdutosPage } from './../produtos/produtos';
 import { CategoriaService } from './../../services/domain/categoria.service';
 
 @IonicPage()

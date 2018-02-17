@@ -1,4 +1,3 @@
-import { OrderConfirmationPage } from './../order-confirmation/order-confirmation';
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 
